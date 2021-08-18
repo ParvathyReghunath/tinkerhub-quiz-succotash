@@ -1,6 +1,7 @@
 #include<stdio.h>
 void main(){
     printf("quiz");
-    printf("thangu");
+    printf("mangu");
     printf("arjun");
+    printf("rakhing");
 }
