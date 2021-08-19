@@ -13,7 +13,7 @@ int main()
      int countr,r,r1,count,i,n;
      float score;
      char choice;
-     char playername[20];
+     char yourname[20];
      time_t t;
 	 time(&t);
      mainhome:
@@ -61,10 +61,10 @@ int main()
      system("cls");
 
     printf("\n\n\n\n\n\n\n\n\n\n\t\t\tRegister your name:");
-     gets(playername);
+     gets(yourname);
 
     system("cls");
-    printf("\n ------------------  Welcome %s to C Program Quiz Game --------------------------",playername);
+    printf("\n ------------------  Welcome %s to C Program Quiz Game --------------------------",yourname);
     printf("\n\n Here are some tips you might wanna know before playing:");
     printf("\n -------------------------------------------------------------------------");
     printf("\n >> There are 2 rounds in this Quiz Game,WARMUP ROUND & CHALLANGE ROUND");
@@ -190,7 +190,7 @@ int main()
 	}
      test:
      system("cls");
-     printf("\n\n\t*** CONGRATULATION %s you are eligible to play the Game ***",playername);
+     printf("\n\n\t*** CONGRATULATION %s you are eligible to play the Game ***",yourname);
      printf("\n\n\n\n\t!Press any key to Start the Game!");
      if(toupper(getch())=='p')
 		{goto game;}
@@ -474,7 +474,7 @@ game:
 		goto home;
 	else
 		{
-		edit_score(score,playername);
+		edit_score(score,yourname);
 		goto mainhome;}}}
 
 void show_record()
