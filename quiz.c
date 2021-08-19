@@ -13,6 +13,7 @@ int main()
      int countr,r,r1,count,i,n;
      float score;
      char choice;
+	 char select;
      char yourname[20];
      time_t t;
 	 time(&t);
@@ -169,7 +170,7 @@ int main()
 		       getch();
 		       break;}
         case 6:
-        printf("\n\n\nvalue of cosπ?");
+        printf("\n\n\nvalue of cos360?");
         printf("\n\nA.0\t\tB.not defined\n\nC.0.5\t\tD.1");
         if (toupper(getch())=='D')
                {printf("\n\nCorrect!!!");count++;
@@ -370,9 +371,39 @@ int main()
      test:
      system("cls");
      printf("\n\n\t*** CONGRATULATION %s you are eligible to play the Safe Zone ***",strupr(yourname));
-     printf("\n\n\n\n\t!Press any key to Start the Game!");
+     printf("\n\n\n\n\t!Press any key to move forward!");
      if(toupper(getch())=='p')
-		{goto game;}
+		{goto zone;}
+zone:
+    system("cls");
+    printf("which of the following,did you want to opt");
+	printf("\n\t\t -> Press C for Current affairs");
+    printf("\n\t\t -> Press O for sports");
+    printf("\n\t\t -> Press F for Film");
+    printf("\n\t\t -> Press L for Landmark");
+    printf("\n\t\t -> Press P for politics");
+	printf("\n\t\t -> Press R for Reasoning");
+    select=toupper(getch());
+     if (select=='C')
+	{
+	show_record();
+	goto mainhome;
+	}
+     else if (select=='O')
+	{
+	help();getch();
+	goto mainhome;
+	}
+	else if (select=='F')
+	{
+	reset_score();
+	getch();
+	goto mainhome;
+	}
+	else if (select=='L')
+	exit(1);
+    else if (select=='P')
+    else if (select=='R')
 game:
      countr=0;
      for(i=1;i<=10;i++)
