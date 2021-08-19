@@ -18,27 +18,23 @@ int main()
 	 time(&t);
      mainhome:
      system("cls");
-     printf("\n\t\t________________________________________");
-
-     printf("\n\t\t\t        WELCOME ");
-     printf("\n\t\t\t          TO ");
-     printf("\n\t\t\t       QUIZ GAME ");
-     printf("\n\t\t________________________________________");
-     printf("\n\t\t________________________________________");
-     printf("\n\t\t    TEST YOUR GK..SET YOUR HIGHSCORES!!    ") ;
-     printf("\n\t\t________________________________________");
-     printf("\n\t\t________________________________________");
+     printf("\n\t\t                                             \n\n");
+     printf("\n\t\t\t          WELCOME ");
+     printf("\n\t\t\t            TO ");
+     printf("\n\t\t\t       AIRIA QUIZZIZ ");
+     printf("\n\t\t                                              ");
+     printf("\n\t\t ENHANCE YOUR KNOWLEDGE AND BE A MILLIONAIRE   ") ;
+     printf("\n\t\t                                               ");
+	 printf("\n\t\t================================================");
      printf("\n\t\t -> Press S to start the game");
      printf("\n\t\t -> Press V to view the highest score  ");
      printf("\n\t\t -> Press R to reset score");
      printf("\n\t\t -> Press H for help            ");
      printf("\n\t\t -> Press Q to quit             ");
-     printf("\n\t\t________________________________________\n\n");
-     	for(i=0;i<80;i++)
-		printf("=");
-	    printf("\nCurrent date and time : %s",ctime(&t));
-	    for(i=0;i<80;i++)
-		printf("=");
+	 printf("\n\t\t================================================\n\n");
+	 printf("\n\t\t.................................................. ");
+     printf("\n\t\t Current date and time : %s",ctime(&t));
+	 printf("\t\t.................................................. ");  
      choice=toupper(getch());
      if (choice=='V')
 	{
@@ -51,9 +47,11 @@ int main()
 	goto mainhome;
 	}
 	else if (choice=='R')
-	{reset_score();
+	{
+	reset_score();
 	getch();
-	goto mainhome;}
+	goto mainhome;
+	}
 	else if (choice=='Q')
 	exit(1);
     else if(choice=='S')
@@ -64,7 +62,7 @@ int main()
      gets(yourname);
 
     system("cls");
-    printf("\n ------------------  Welcome %s to C Program Quiz Game --------------------------",yourname);
+    printf("\n ------------------  Welcome %s to Aira Quizziz --------------------------",yourname);
     printf("\n\n Here are some tips you might wanna know before playing:");
     printf("\n -------------------------------------------------------------------------");
     printf("\n >> There are 2 rounds in this Quiz Game,WARMUP ROUND & CHALLANGE ROUND");
