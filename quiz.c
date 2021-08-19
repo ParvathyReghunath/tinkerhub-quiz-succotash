@@ -96,7 +96,7 @@ int main()
      home:
      system("cls");
      count=0;
-     for(i=1;i<=3;i++)
+     for(i=1;i<=22;i++)
      {
     system("cls");
      r1=i;
@@ -225,7 +225,7 @@ int main()
 		       break;}
 		case 11:
         printf("\n\n\nSaikhom Mirabai Chanu,women weighlifter is representing India in category");
-		printf("\n\n\nin_____category at Tokyo Olympics 2020?");
+		printf("\nin_____category at Tokyo Olympics 2020?");
         printf("\n\nA.49\t\tB.59\n\nC.55\t\tD.64");
         if (toupper(getch())=='A')
                {printf("\n\nCorrect!!!");count++;
@@ -369,7 +369,7 @@ int main()
 	}
      test:
      system("cls");
-     printf("\n\n\t*** CONGRATULATION %s you are eligible to play the Game ***",strupr(yourname));
+     printf("\n\n\t*** CONGRATULATION %s you are eligible to play the Safe Zone ***",strupr(yourname));
      printf("\n\n\n\n\t!Press any key to Start the Game!");
      if(toupper(getch())=='p')
 		{goto game;}
