@@ -3,17 +3,18 @@
 #include<ctype.h>
 #include<stdlib.h>
 #include<string.h>
-#include<time.h>
 void show_record();
 void reset_score();
 void help();
 void edit_score(float , char []);
 int main()
      {
-     int countr,r,r1,count,i,n;
+     int countr,r,r1,count,i,n,countn,r2;
      float score;
      char choice;
 	 char select;
+	 char film;
+	 char affairs;
      char yourname[20];
      time_t t;
 	 time(&t);
@@ -38,20 +39,20 @@ int main()
 	 printf("\t\t.................................................. ");  
      choice=toupper(getch());
      if (choice=='V')
-	{
-	show_record();
-	goto mainhome;
-	}
+	 {
+	  show_record();
+	  goto mainhome;
+	 }
      else if (choice=='H')
-	{
-	help();getch();
-	goto mainhome;
-	}
-	else if (choice=='R')
-	{
-	reset_score();
-	getch();
-	goto mainhome;
+	 {
+	  help();getch();
+	  goto mainhome;
+	 }
+	 else if (choice=='R')
+	 {
+	  reset_score();
+	  getch();
+	  goto mainhome;
 	}
 	else if (choice=='Q')
 	exit(1);
@@ -368,45 +369,287 @@ int main()
 	getch();
 	goto mainhome;
 	}
-     test:
+    test:
      system("cls");
      printf("\n\n\t*** CONGRATULATION %s you are eligible to play the Safe Zone ***",strupr(yourname));
      printf("\n\n\n\n\t!Press any key to move forward!");
      if(toupper(getch())=='p')
 		{goto zone;}
-zone:
-    system("cls");
-    printf("which of the following,did you want to opt");
-	printf("\n\t\t -> Press C for Current affairs");
-    printf("\n\t\t -> Press O for sports");
-    printf("\n\t\t -> Press F for Film");
-    printf("\n\t\t -> Press L for Landmark");
-    printf("\n\t\t -> Press P for politics");
-	printf("\n\t\t -> Press R for Reasoning");
-    select=toupper(getch());
-     if (select=='C')
-	{
-	show_record();
-	goto mainhome;
-	}
-     else if (select=='O')
-	{
-	help();getch();
-	goto mainhome;
-	}
-	else if (select=='F')
-	{
-	reset_score();
-	getch();
-	goto mainhome;
-	}
-	else if (select=='L')
-	exit(1);
-    else if (select=='P')
-    else if (select=='R')
-game:
-     countr=0;
-     for(i=1;i<=10;i++)
+    zone:
+      system("cls");
+      printf("which of the following,did you want to opt");
+	  printf("\n\t\t -> Press C for Current affairs");
+      printf("\n\t\t -> Press O for sports");
+      printf("\n\t\t -> Press F for Film");
+      printf("\n\t\t -> Press L for Landmark");
+      printf("\n\t\t -> Press P for India");
+	  printf("\n\t\t -> Press R for Reasoning");
+      select=toupper(getch());
+	   if(select=='F')
+	   {goto film;}
+	   if(select=='P') 
+	   {goto India;}
+	  
+	  film:
+	  countn=0;
+	  for(i=1;i<=10;i++)
+	  {system("cls");
+	   r2=i;
+	   switch(r2)
+	   {
+        case 1:
+		printf("\n\nLumiere brothers,the pioneer of motion-picture are from");
+		printf("\n\nA.USA\t\tB.French\n\nC.England\t\tD.Germany");
+		if (toupper(getch())=='B')
+		{printf("\n\nCorrect!!!");
+		 countn=countn+3;
+		 getch();
+		 break;getch();}
+		else
+		{printf("\n\nWrong!!! The correct answer is B.French");getch();
+		 countn=countn-1;
+		 break;}
+		case 2:
+		printf("\n\n\nFrom which year,Oscar Award was first awarded?");
+		printf("\n\nA.1929\t\tB.1932\n\nC.1935\t\tD.1921");
+		if (toupper(getch())=='A')
+			{printf("\n\nCorrect!!!");
+			 countn=countn+3;
+			 getch();
+			 break;}
+		else
+		    {printf("\n\nWrong!!! The correct answer is A.1929");getch();	
+			 countn=countn-1;	      
+		     break;
+		    }
+        case 3:
+		printf("\n\n\nwhich one is the longest film to be shown in a cinema");
+		printf("\n\nA.Grandmother Martha\t\tB.The Cure for Isnomia");
+		printf("\n\nC.The clock\t\tD.Helmet:A Chronicle 0f Germany");
+		if (toupper(getch())=='B')
+			{printf("\n\nCorrect!!!");countn=countn+3;getch();
+			 break;}
+		else
+		    {printf("\n\nWrong!!! The correct answer isB.The Cure for Isnomia");getch();
+		     countn=countn-1;
+		     break;}
+
+        case 4:
+		printf("\n\n\nThe man with most oscar awards");
+		printf("\n\nA.Edith Head\t\tB.John Ford\n\nC.Walt Disney\t\tD.Katharine Hepburn");
+		if (toupper(getch())=='C')
+			{printf("\n\nCorrect!!!");countn=countn+3;getch();
+			 break;}
+		else
+		       {
+                printf("\n\nWrong!!! The correct answer is C.Walt Disney");getch();
+		        countn=countn-1;
+		        break;
+		       }
+
+        case 5:
+		printf("\n\n\nThe movie 'The Godfather' wins the Oscar for Best Picture in the year?");
+		printf("\n\nA.1969\t\tB.1970\n\nC.1972\t\tD.1975");
+		if (toupper(getch())=='c')
+			{printf("\n\nCorrect!!!");countn=countn+3;getch(); break;}
+		else
+		       {
+		           printf("\n\nWrong!!! The correct answer is C.1972");
+		           getch();
+		           countn=countn-1;
+		           break;
+		       }
+
+		case 6:
+		printf("\n\n\nLast film directed by Sathyajit Ray?");
+		printf("\n\nA.Agantuk\t\tB.Bala\n\nC.Pikoo\t\tD.Jana Aranya");
+		if (toupper(getch())=='A' )
+			{printf("\n\nCorrect!!!");countn=countn+3;getch();
+			 break;}
+		else
+		    {printf("\n\nWrong!!! The correct answer is A.Agantuk");
+		     getch();
+			 countn=countn-1;
+		     break;}
+
+        case 7:
+		printf("\n\n\nFilm and Television Institute of India located at?");
+		printf("\n\nA.Mumbai\t\tB.Kolkata\n\nC.Delhi\t\tD.Pune");
+		if (toupper(getch())=='D')
+			{printf("\n\nCorrect!!!");countn=countn+3;getch();
+			 break;}
+		else
+		       {printf("\n\nWrong!!! The correct answer is D.Pune");getch();
+		        countn=countn-1;
+		        break;}
+
+        case 8:
+		printf("\n\n\nTotal number of Best Actor nomination for Amitabh Bachan in filmfare award?");
+		printf("\n\nA.26\t\tB.28\n\nC.14\t\tD.12");
+		if (toupper(getch())=='B')
+			{printf("\n\nCorrect!!!");countn=countn+3;getch(); break;}
+		else
+		       {printf("\n\nWrong!!! The correct answer is B.28");getch();
+		       countn=countn-1;
+		       break;}
+
+        case 9:
+		printf("\n\n\nDooradarshan founded in India in the year?");
+		printf("\n\nA.1962\t\tB.1965\n\nC.1952\t\tD.1959");
+		if (toupper(getch())=='D')
+			{printf("\n\nCorrect!!!");countn=countn+3; getch();
+			break;}
+		else
+		       {printf("\n\nWrong!!! The correct answer is D.1959");getch();
+		        countn=countn-1;
+		        break;}
+
+        case 10:
+		printf("\n\nFirst 3D animinated film from India is?");
+		printf("\n\nA.Roadside Romeo\t\tB.Ghayab Aaya\n\nC.Hanuman\t\tD.Bal Ganesh");
+		if (toupper(getch())=='A')
+			{printf("\n\nCorrect!!!");countn=countn+3;getch(); 
+			 countn=countn+3;
+			 break;}
+		else
+		       {printf("\n\nWrong!!! The correct answer is A.Roadside Romeo");getch();
+			   countn=countn-1;
+			   break;}
+
+	   }
+	  India:
+	  countn=0;
+	  for(i=1;i<=10;i++)
+	  {system("cls");
+	   r2=i;
+	   switch(r2)
+	   {
+        case 1:
+		printf("\n\nWho was the first speaker of Lok Sabha");
+		printf("\n\nA.Mavlankar\t\tB.Hukum Singh\n\nC.B.D Jatti\t\tD.V.V Giri");
+		if (toupper(getch())=='A')
+		{printf("\n\nCorrect!!!");
+		 countn=countn+3;
+		 getch();
+		 break;getch();}
+		else
+		{printf("\n\nWrong!!! The correct answer isA.Mavlankar");getch();
+		 countn=countn-1;
+		 break;}
+		case 2:
+		printf("\n\n\nIndia's only Naval Aviation Museum is located in");
+		printf("\n\nA.Karnataka\t\tB.Kerala\n\nC.Tamilnadu\t\tD.Goa");
+		if (toupper(getch())=='D')
+			{printf("\n\nCorrect!!!");
+			 countn=countn+3;
+			 getch();
+			 break;}
+		else
+		    {printf("\n\nWrong!!! The correct answer is D.Goa");getch();	
+			 countn=countn-1;	      
+		     break;
+		    }
+        case 3:
+		printf("\n\n\nLargest river in south India");
+		printf("\n\nA.Krishna\t\tB.Godavari");
+		printf("\n\nC.Kavery\t\tD.Mahanadi");
+		if (toupper(getch())=='B')
+			{printf("\n\nCorrect!!!");countn=countn+3;getch();
+			 break;}
+		else
+		    {printf("\n\nWrong!!! The correct answer isB.Godavari");getch();
+		     countn=countn-1;
+		     break;}
+
+        case 4:
+		printf("\n\n\nWho was called Grand Old Man of India");
+        printf("\n\nA.Bala Gangadhar Thilak\t\tB.Dadabhai Navaroji");
+		printf("\n\nC.Gopala Krishna Gokale\t\tD.Feroz Shah Mehta");
+		if (toupper(getch())=='B')
+			{printf("\n\nCorrect!!!");countn=countn+3;getch();
+			 break;}
+		else
+		       {
+                printf("\n\nWrong!!! The correct answer is B.Dadabhai Navaroji");getch();
+				countn=countn-1;
+		        break;
+		       }
+
+        case 5:
+		printf("\n\n\nThe National Police Academy is located in?");
+		printf("\n\nA.Abu Road\t\tB.Delhi\n\nC.Hyderabad\t\tD.Bangalore");
+		if (toupper(getch())=='c')
+			{printf("\n\nCorrect!!!");countn=countn+3;getch(); break;}
+		else
+		       {
+		           printf("\n\nWrong!!! The correct answer is C.Hyderabad");
+		           getch();
+		           countn=countn-1;
+		           break;
+		       }
+
+		case 6:
+		printf("\n\n\nWho established the first Women's University of India?");
+		printf("\n\nA.Hirabai Tata\t\tB.Ramabai Ranade\n\nC.Annie Besant\t\tD.D.K karve");
+		if (toupper(getch())=='D' )
+			{printf("\n\nCorrect!!!");countn=countn+3;getch();
+			 break;}
+		else
+		    {printf("\n\nWrong!!! The correct answer is D.D.K karve ");
+		     getch();
+			 countn=countn-1;
+		     break;}
+
+        case 7:
+		printf("\n\n\nThe maximum number of Public Accounts Committie can be?");
+		printf("\n\nA.10\t\tB.12\n\nC.22\t\tD.25");
+		if (toupper(getch())=='C')
+			{printf("\n\nCorrect!!!");countn=countn+3;getch();
+			 break;}
+		else
+		       {printf("\n\nWrong!!! The correct answer is c.22");getch();
+		        countn=countn-1;
+		        break;}
+
+        case 8:
+		printf("\n\n\nIn which year Sikkim become a part of India");
+		printf("\n\nA.1972\t\tB.1975\n\nC.1977\t\tD.1980");
+		if (toupper(getch())=='B')
+			{printf("\n\nCorrect!!!");countn=countn+3;getch(); break;}
+		else
+		       {printf("\n\nWrong!!! The correct answer is B.1975");getch();
+		       countn=countn-1;
+		       break;}
+
+        case 9:
+		printf("\n\n\nDooradarshan founded in India in the year?");
+		printf("\n\nA.1962\t\tB.1965\n\nC.1952\t\tD.1959");
+		if (toupper(getch())=='D')
+			{printf("\n\nCorrect!!!");countn=countn+3; getch();
+			break;}
+		else
+		       {printf("\n\nWrong!!! The correct answer is D.1959");getch();
+		        countn=countn-1;
+		        break;}
+
+        case 10:
+		printf("\n\nWhich river is called Bangal's sarrow?");
+		printf("\n\nA.Yamuna\t\tB.Damodhar\n\nC.Narmada\t\tD.Tapti");
+		if (toupper(getch())=='B')
+			{printf("\n\nCorrect!!!");countn=countn+3;getch(); 
+			 countn=countn+3;
+			 break;}
+		else
+		       {printf("\n\nWrong!!! The correct answer is B.Damodhar");getch();
+			   countn=countn-1;
+			   break;}
+
+	   }
+
+      
+	game:
+    countr=0;
+    for(i=1;i<=10;i++)
      {system("cls");
      r=i;
 
