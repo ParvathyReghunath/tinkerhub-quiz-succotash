@@ -1252,73 +1252,76 @@ int main()
      switch(r)
 		{
 		case 1:
-		printf("\n\nWhat is the National Game of England?");
-		printf("\n\nA.Football\t\tB.Basketball\n\nC.Cricket\t\tD.Baseball");
-		if (toupper(getch())=='C')
+		printf("\n\nWhich among the following is not correctly matched?");
+		printf("\n\nA.Sukhna Lake-Chandigarh\t\tB.Wandoor-Andaman&Nicobar");
+		printf("\n\nC.BangaramBeach-Lakshadweep\t\tD.Devka Beach-Goa");
+		if (toupper(getch())=='D')
 			{printf("\n\nCorrect!!!");countr++;getch();
 			 break;getch();}
 		else
-		       {printf("\n\nWrong!!! The correct answer is C.Cricket");getch();
+		       {printf("\n\nWrong!!! The correct answer is D.Devka Beach-Goa");getch();
 		       goto score;
 		       break;}
 
 		case 2:
-		printf("\n\n\nStudy of Earthquake is called............,");
-		printf("\n\nA.Seismology\t\tB.Cosmology\n\nC.Orology\t\tD.Etimology");
-		if (toupper(getch())=='A')
+		printf("\n\n\nNational Rural Health mission lauched in,");
+		printf("\n\nA.October 2005\t\tB.Auguast 2005\n\nC.April 2005\t\tD.July 2005");
+		if (toupper(getch())=='C')
 			{printf("\n\nCorrect!!!");countr++;getch();
 			 break;}
 		else
-		       {printf("\n\nWrong!!! The correct answer is A.Seismology");getch();
+		       {printf("\n\nWrong!!! The correct answer is C.April 2005");getch();
 		      goto score;
 		       break;
 		       }
 
         case 3:
-		printf("\n\n\nAmong the top 10 highest peaks in the world, how many lie in Nepal? ");
-		printf("\n\nA.6\t\tB.7\n\nC.8\t\tD.9");
+		printf("\n\n\nWhich of the following is not correct? ");
+		printf("\n\nA.NMA-National Monuments Authority\t\tB.SIT-Special Investigation Teamn");
+		printf("\n\nC.BSF-British Security Force\t\tD.ASI-Archeology Survey Of India");
 		if (toupper(getch())=='C')
 			{printf("\n\nCorrect!!!");countr++;getch();
 			 break;}
 		else
-		       {printf("\n\nWrong!!! The correct answer is C.8");getch();
+		       {printf("\n\nWrong!!! The correct answer is C.BSF-Border Security Force");getch();
 		       goto score;
 		       break;}
 
         case 4:
-		printf("\n\n\nThe Laws of Electromagnetic Induction were given by?");
-		printf("\n\nA.Faraday\t\tB.Tesla\n\nC.Maxwell\t\tD.Coulomb");
+		printf("\n\n\nIn which year Pulitzer Prize established?");
+		printf("\n\nA.1917\t\tB.1918\n\nC.1916\t\tD.1919");
 		if (toupper(getch())=='A')
 			{printf("\n\nCorrect!!!");countr++;getch();
 			 break;}
 		else
 		       {
-                printf("\n\nWrong!!! The correct answer is A.Faraday");getch();
+                printf("\n\nWrong!!! The correct answer is A.1917");getch();
 		       goto score;
 		       break;
 		       }
 
         case 5:
-		printf("\n\n\nIn what unit is electric power measured?");
-		printf("\n\nA.Coulomb\t\tB.Watt\n\nC.Power\t\tD.Units");
-		if (toupper(getch())=='B')
+		printf("\n\n\nWho invented Gunpowder?");
+		printf("\n\nA.Ferdinand Von Zeppelin\t\tB.Sir Frank Whittle");
+		printf("\n\nC.Roger Bacon\t\tD.Leo H Baekeland");
+		if (toupper(getch())=='C')
 			{printf("\n\nCorrect!!!");countr++;getch(); break;}
 		else
 		       {
-		           printf("\n\nWrong!!! The correct answer is B.Power");
+		           printf("\n\nWrong!!! The correct answer is C.Roger Bacon");
 		       getch();
 		       goto score;
 		       break;
 		       }
 
 		case 6:
-		printf("\n\n\nWhich element is found in Vitamin B12?");
-		printf("\n\nA.Zinc\t\tB.Cobalt\n\nC.Calcium\t\tD.Iron");
-		if (toupper(getch())=='B' )
+		printf("\n\n\nBrown Waterfalls are situated in");
+		printf("\n\nA.Australia\t\tB.Canada\n\nC.Switzerland\t\tD.New Zealand");
+		if (toupper(getch())=='D' )
 			{printf("\n\nCorrect!!!");countr++;getch();
 			 break;}
 		else
-		       {printf("\n\nWrong!!! The correct answer is B.Cobalt");goto score;
+		       {printf("\n\nWrong!!! The correct answer is D.Newzeland");goto score;
 		       getch();
 		       break;}
 
@@ -1334,23 +1337,24 @@ int main()
 		       break;}
 
         case 8:
-		printf("\n\n\nHow many times a piece of paper can be folded at the most?");
-		printf("\n\nA.6\t\tB.7\n\nC.8\t\tD.Depends on the size of paper");
-		if (toupper(getch())=='B')
+		printf("\n\n\n1917 is known for?");
+		printf("\n\nA.Battle of Trafalgar\t\tB.Battle of Waterloo");
+		printf("\n\nC.End of World War2t\tD.The Russian Revolution");
+		if(toupper(getch())=='D')
 			{printf("\n\nCorrect!!!");countr++;getch(); break;}
 		else
-		       {printf("\n\nWrong!!! The correct answer is B.7");getch();
+		       {printf("\n\nWrong!!! The correct answer isD.The Russian Revolution");getch();
 		       goto score;
 		       break;}
 
         case 9:
-		printf("\n\n\nWhat is the capital of Denmark?");
-		printf("\n\nA.Copenhagen\t\tB.Helsinki\n\nC.Ajax\t\tD.Galatasaray");
-		if (toupper(getch())=='A')
+		printf("\n\n\nDiesal locomotives are built in?");
+		printf("\n\nA.Bangalore\t\tB.Varanasi\n\nC.Perambur\t\tD.Hubli");
+		if (toupper(getch())=='B')
 			{printf("\n\nCorrect!!!");countr++; getch();
 			break;}
 		else
-		       {printf("\n\nWrong!!! The correct answer is A.Copenhagen");getch();
+		       {printf("\n\nWrong!!! The correct answer is B.Varanasi");getch();
 		       goto score;
 		       break;}
 
@@ -1363,13 +1367,13 @@ int main()
 		       {printf("\n\nWrong!!! The correct answer is A.Nile");getch();break;goto score;}
 
         case 11:
-		printf("\n\n\nWhat is the color of the Black Box in aeroplanes?");
-		printf("\n\nA.White\t\tB.Black\n\nC.Orange\t\tD.Red");
-		if (toupper(getch())=='C')
+		printf("\n\n\nWho wrote the famous book WE THE PEOPLE?");
+		printf("\n\nA.T.N Kaul\t\tB.J.R.d Tata\n\nC.Khushwant Singh\t\tD.Nani Palkhivala");
+		if (toupper(getch())=='D')
 			{printf("\n\nCorrect!!!");countr++;getch();
 			 break;}
 		else
-              {printf("\n\nWrong!!! The correct answer is C.Orange");getch();
+              {printf("\n\nWrong!!! The correct answer is D.Nani Palkhivala");getch();
               break;goto score;}
 
         case 12:
@@ -1383,117 +1387,36 @@ int main()
               break;goto score;}
 
 		case 13:
-		printf("\n\n\nName the country where there no mosquitoes are found?");
-		printf("\n\nA.Japan\t\tB.Italy\n\nC.Argentina\t\tD.France");
+		printf("\n\n\n18th March is celebrated as?");
+		printf("\n\nA.World Wild life Day\t\tB.International Women Day");
+		printf("\n\nC.Self Injury Awareness Day\t\tD.World Sleep Day");
 		if (toupper(getch())=='D')
 			{printf("\n\nCorrect!!!");countr++;getch();
 			break;}
 		else
-		       {printf("\n\nWrong!!! The correct answer is D.France");getch();
+		       {printf("\n\nWrong!!! The correct answer is D.World Sleep Day");getch();
 		       break;goto score;}
 
         case 14:
-		printf("\n\n\nWho is the author of 'Pulpasa Cafe'?");
-		printf("\n\nA.Narayan Wagle\t\tB.Lal Gopal Subedi\n\nC.B.P. Koirala\t\tD.Khagendra Sangraula");
-		if (toupper(getch())=='A')
+		printf("\n\n\nFirst bank in Kerala'?");
+		printf("\n\nA.Bank of Hindhusthan\t\tB.State Bank of Hindhusthan");
+		printf("\n\nC.Nedumanghadi Bank\t\tD.Grameen Bank");
+		if (toupper(getch())=='C')
 			{printf("\n\nCorrect!!!");countr++;getch();
 			 break;}
 		else
-		       {printf("\n\nWrong!!! The correct answer is A.Narayan Wagle");getch();
+		       {printf("\n\nWrong!!! The correct answer is C.Nedumanghadi Bank");getch();
 		       break;goto score;}
 
 		case 15:
-		printf("\n\n\nWhich Blood Group is known as the Universal Recipient?");
-		printf("\n\nA.A\t\tB.AB\n\nC.B\t\tD.O");
-		if (toupper(getch())=='B')
+		printf("\n\n\nGreta Garbo is associated with?");
+		printf("\n\nA.Classical dance\t\tB.Literutre\n\nC.Journalism\t\tD.Acting");
+		if (toupper(getch())=='D')
 			{printf("\n\nCorrect!!!");countr++;getch();
 			 break;}
 		else
-		       {printf("\n\nWrong!!! The correct answer is B.AB");getch();
+		       {printf("\n\nWrong!!! The correct answer is D.Acting");getch();
 		       goto score;
-		       break;}
-
-		case 16:
-		printf("\n\n\nWhat is the unit of measurement of distance between Stars?");
-		printf("\n\nA.Light Year\t\tB.Coulomb\n\nC.Nautical Mile\t\tD.Kilometer");
-		if (toupper(getch())=='A')
-			{printf("\n\nCorrect!!!");countr++; getch();
-			break;
-			}
-		else
-		       {printf("\n\nWrong!!! The correct answer is A.Light Year");getch();
-		       goto score;
-		       break;}
-
-
-		case 17:
-		printf("\n\n\nThe country famous for Samba Dance is........");
-		printf("\n\nA.Brazil\t\tB.Venezuela\n\nC.Nigeria\t\tD.Bolivia");
-		if (toupper(getch())=='A')
-			{printf("\n\nCorrect!!!");countr++; getch();
-			break;}
-		else
-		       {printf("\n\nWrong!!! The correct answer is A.Brazil");getch();goto score;
-		       break;}
-
-		case 18:
-		printf("\n\n\nWind speed is measure by__________?");
-		printf("\n\nA.Lysimeter\t\tB.Air vane\n\nC.Hydrometer\t\tD.Anemometer\n\n");
-		if (toupper(getch())=='D')
-			{printf("\n\nCorrect!!!");countr++; getch();
-			break;}
-		else
-		       {printf("\n\nWrong!!! The correct answer is D.Anemometer");getch();goto score;
-		       break;}
-
-		case 19:
-		printf("\n\n\nWhich city in the world is popularly known as The City of Temple?");
-		printf("\n\nA.Delhi\tB.Bhaktapur\n\nC.Kathmandu\tD.Agra\n\n");
-		if (toupper(getch())=='C')
-			{printf("\n\nCorrect!!!");countr++; getch();
-			break;}
-		else
-		       {printf("\n\nWrong!!! The correct answer is C.Kathmandu");getch();goto score;
-		       break;}
-
-		case 20:
-		printf("\n\n\nWhich hardware was used in the First Generation Computer?");
-		printf("\n\nA.Transistor\t\tB.Valves\n\nC.I.C\t\tD.S.S.I");
-		if (toupper(getch())=='B')
-			{printf("\n\nCorrect!!!");countr++; getch();
-			break;}
-		else
-		       {printf("\n\nWrong!!! The correct answer is B.Valves");getch();goto score;
-		       break;}
-
-		case 21:
-		printf("\n\n\nOzone plate is being destroyed regularly because of____ ?");
-		printf("\n\nA.L.P.G\t\tB.Nitrogen\n\nC.Methane\t\tD. C.F.C");
-		if (toupper(getch())=='D')
-			{printf("\n\nCorrect!!!");countr++; getch();
-			break;}
-		else
-		       {printf("\n\nWrong!!! The correct answer is D. C.F.C");getch();goto score;
-		       break;}
-
-		case 22:
-		printf("\n\n\nWho won the Women's Australian Open Tennis in 2007?");
-		printf("\n\nA.Martina Hingis\t\tB.Maria Sarapova\n\nC.Kim Clijster\t\tD.Serena Williams");
-		if (toupper(getch())=='D')
-			{printf("\n\nCorrect!!!");countr++; getch();
-			break;}
-		else
-		       {printf("\n\nWrong!!! The correct answer is D.Serena Williams");getch();goto score;
-		       break;}
-
-		case 23:
-		printf("\n\n\nWhich film was awarded the Best Motion Picture at Oscar in 2010?");
-		printf("\n\nA.The Secret in their Eyes\t\tB.Shutter Island\n\nC.The King's Speech\t\tD.The Reader");
-		if (toupper(getch())=='C')
-			{printf("\n\nCorrect!!!");countr++; getch();
-			break;}
-		else
-		       {printf("\n\nWrong!!! The correct answer is C.The King's Speech");getch();goto score;
 		       break;}}}
 	score:
     system("cls");
@@ -1511,7 +1434,7 @@ int main()
 	    printf("\t\t Thank You!!");
 	}
 	 else
-{
+    {
 	 printf("\n\n\t******** SORRY YOU DIDN'T WIN ANY CASH ********");
 	    printf("\n\t\t Thanks for your participation");
 	    printf("\n\t\t TRY AGAIN");goto go;}
