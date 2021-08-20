@@ -73,7 +73,7 @@ int main()
 	printf("\n\t\t                                                                          ");
 	printf("\n >> In SAFE ZONE you are allowed to choose your interested topic from the "); 
 	printf("\n    given 6 topics.You are eligible to reach the challenge zone only if you");
-	printf("\n    score above 23.This zone consist of total 10 questions where you score 3");
+	printf("\n    score above 19.This zone consist of total 10 questions where you score 3");
 	printf("\n    mark for each right answer and 1 mark deducted for each wrong answer.");
 	printf("\n\t\t\t\t\t\t                                                                     ");
     printf("\n >> Your game starts with CHALLANGE ZONE. In this zone you will be asked ");
@@ -382,14 +382,14 @@ int main()
       printf("\n\t\t -> Press O for sports");
       printf("\n\t\t -> Press F for Film");
       printf("\n\t\t -> Press L for Landmark");
-      printf("\n\t\t -> Press P for India");
+      printf("\n\t\t -> Press I for India");
 	  printf("\n\t\t -> Press R for Reasoning");
     select=toupper(getch());
-	if (select=='F')
+    if (select=='F')
 	{
 		goto film;getch();
 	}
-	else if (select=='P') 
+	else if (select=='I')
 	{
 		goto India;getch();
 	}
@@ -523,7 +523,7 @@ int main()
 			   countn=countn-1;
 			   break;}
         }}
-		if(count>=24)
+		if(count>=20)
 	    {goto success;}
 	    else
 	    {
@@ -659,7 +659,7 @@ int main()
 			   break;}
 
 	   }}
-	   if(count>=24)
+	   if(count>=20)
 	    {goto success;}
 	    else
 	    {
@@ -802,7 +802,7 @@ int main()
 			   county--;
 			   break;}
 	   }}
-	   if(count>=24)
+	   if(count>=20)
 	    {goto success;}
 	   else
 	    {
