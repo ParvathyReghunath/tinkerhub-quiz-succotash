@@ -10,8 +10,8 @@ void help();
 void edit_score(float , char []);
 int main()
      {
-     int countr,r,r1,r3,r4,count;
-	 int i,n,countn,r2,county,counts;
+     int countr,r,r1,r3,r4,count,r5,counto,coun;
+	 int i,n,countn,r2,county,counts,r6,counte,r7;
      float score;
      char choice;
 	 char select;
@@ -378,16 +378,28 @@ int main()
     zone:
       system("cls");
       printf("Choose area of your interst!!!!");
-	  printf("\n\t\t -> Press C for Current affairs");
+	  printf("\n\t\t -> Press N for Nutrition");
       printf("\n\t\t -> Press O for sports");
       printf("\n\t\t -> Press F for Film");
       printf("\n\t\t -> Press L for Landmark");
       printf("\n\t\t -> Press I for India");
 	  printf("\n\t\t -> Press R for Reasoning");
     select=toupper(getch());
-    if (select=='F')
+	if (select=='N')
+	{
+		goto nutrition;getch();
+	}
+	else if (select=='O')
+	{
+		goto sports;getch();
+	}
+    else if (select=='F')
 	{
 		goto film;getch();
+	}
+	else if (select=='L')
+	{
+		goto landmark;getch();
 	}
 	else if (select=='I')
 	{
@@ -397,6 +409,279 @@ int main()
 	{
 		goto reasoning;getch();
 	}
+	  nutrition:
+	  coun=0;
+	  for(i=1;i<=10;i++)
+	  {system("cls");
+	   r7=i;
+	   switch(r7)
+	   {
+        case 1:
+		printf("\n\n\nAmylases in saliva begin the breakdown of carbohydrates into_____");
+		printf("\n\nA.fatty acids\t\tB.polypeptides\n\nC.amino acids\t\tD.simple sugars");
+		if (toupper(getch())=='D')
+		{printf("\n\nCorrect!!!");
+		 coun=coun+3;
+		 getch();
+		 break;getch();}
+		else
+		{printf("\n\nWrong!!! The correct answer is D.simple sugars");getch();
+		 coun--;
+		 break;}
+		case 2:
+		printf("\n\n\nMineral that body needs to work properly is_______");
+		printf("\n\nA.Calcium\t\tB.silver\n\nC.gold\t\tD.lead");
+		if (toupper(getch())=='A')
+			{printf("\n\nCorrect!!!");
+			 coun=coun+3;
+			 getch();
+			 break;}
+		else
+		    {printf("\n\nWrong!!! The correct answer is A.Calcium");getch();	
+			 coun--;	      
+		     break;
+		    }
+        case 3:
+		printf("\n\n\nCitrus foods are an excellent source of_______");
+		printf("\n\nA.Calcium\t\tB.Vitamin C");
+		printf("\n\nC.Vitamin B\t\tD.Calories");
+		if (toupper(getch())=='B')
+			{printf("\n\nCorrect!!!");coun=coun+3;getch();
+			 break;}
+		else
+		    {printf("\n\nWrong!!! The correct answer isB.Vitamin C");getch();
+		     coun--;
+		     break;}
+
+        case 4:
+		printf("\n\n\nBest source for omega-3 fatty acids.......");
+        printf("\n\nA.Corn Oil\t\tB.Wheat Products");
+		printf("\n\nC.Pork\t\tD.Sardines");
+		if (toupper(getch())=='D')
+			{printf("\n\nCorrect!!!");coun=coun+3;getch();
+			 break;}
+		else
+		       {
+                printf("\n\nWrong!!! The correct answer is D.Sardines");getch();
+				coun--;
+		        break;
+		       }
+
+        case 5:
+		printf("\n\n\nNutrient important for healthy vision.....");
+		printf("\n\nA.Vitamin K\t\tB.Calcium\n\nC.Vitamin A\t\tD.Iron");
+		if (toupper(getch())=='C')
+			{printf("\n\nCorrect!!!");coun=coun+3;getch(); break;}
+		else
+		       {
+		           printf("\n\nWrong!!! The correct answer is C.Vitamin A");
+		           getch();
+		           coun--;
+		           break;
+		       }
+
+		case 6:
+		printf("\n\n\nWhat is the main ingredient of black pudding...?");
+		printf("\n\nA.Milk\t\tB.Blood\n\nC.Vermicelli\t\tD.Wine");
+		if (toupper(getch())=='B' )
+			{printf("\n\nCorrect!!!");coun=coun+3;getch();
+			 break;}
+		else
+		    {printf("\n\nWrong!!! The correct answer is B.Blood");
+		     getch();
+			 coun--;
+		     break;}
+
+        case 7:
+		printf("\n\n\nWhat is couscous made from....?");
+		printf("\n\nA.Semolina\t\tB.Aubergines\n\nC.Bobotie\t\tD.Garbanzo flour");
+		if (toupper(getch())=='A')
+			{printf("\n\nCorrect!!!");coun=coun+3;getch();
+			 break;}
+		else
+		       {printf("\n\nWrong!!! The correct answer is A.Semolina");getch();
+		        coun--;
+		        break;}
+
+        case 8:
+		printf("\n\n\nEnglish Toffee day is in which month.....?");
+		printf("\n\nA.September\t\tB.June\n\nC.March\t\tD.January");
+		if (toupper(getch())=='D')
+			{printf("\n\nCorrect!!!");coun=coun+3;getch(); break;}
+		else
+		       {printf("\n\nWrong!!! The correct answer is D.January");getch();
+		       coun--;
+		       break;}
+
+        case 9:
+		printf("\n\n\nIchthyophobia means ______________");
+		printf("\n\nA.Fear of food\t\tB.Fear of fish");
+		printf("\n\nC.Fear of cattle\t\tD.Fear of cooking");
+		if (toupper(getch())=='B')
+			{printf("\n\nCorrect!!!");coun=coun+3; getch();
+			break;}
+		else
+		       {printf("\n\nWrong!!! The correct answer is B.Fear of fish");getch();
+		        coun--;
+		        break;}
+
+        case 10:
+		printf("\n\n\nWhich part of turmeric plant is dried and used in Indian Cooking..?");
+		printf("\n\nA.Stem\t\tB.Leaf\n\nC.Root\t\tD.Petiole");
+		if (toupper(getch())=='C')
+			{printf("\n\nCorrect!!!");coun=coun+3;getch(); 
+			 break;}
+		else
+		       {printf("\n\nWrong!!! The correct answer is C.Root");getch();
+			   coun--;
+			   break;}
+
+	   }}
+	   if(coun>=20)
+	    {goto success;}
+	    else
+	    {
+	    system("cls");
+	    printf("\n\nSORRY YOU ARE NOT ELIGIBLE TO PLAY THIS GAME, BETTER LUCK NEXT TIME");
+	    getch();
+	    goto mainhome;
+	    }
+	  sports:
+	  counte=0;
+	  for(i=1;i<=10;i++)
+	  {system("cls");
+	   r6=i;
+	   switch(r6)
+	   {
+        case 1:
+		printf("\n\n\nWhich Country won the first FIFA World Cup..?");
+		printf("\n\nA.Argentina\t\tB.Brazil\n\nC.Italy\t\tD.Uruguay");
+		if (toupper(getch())=='D')
+		{printf("\n\nCorrect!!!");
+		 counte=counte+3;
+		 getch();
+		 break;getch();}
+		else
+		{printf("\n\nWrong!!! The correct answer is D.Uruguay");getch();
+		 counte--;
+		 break;}
+		case 2:
+		printf("\n\n\nWho is known as Flying Sikh...?");
+		printf("\n\nA.Michael Johnson\t\tB.Usain Bolt\n\nC.Milkha Sing\t\tD.Carl Lewis");
+		if (toupper(getch())=='C')
+			{printf("\n\nCorrect!!!");
+			 counte=counte+3;
+			 getch();
+			 break;}
+		else
+		    {printf("\n\nWrong!!! The correct answer is C.Milkha Sing");getch();	
+			 counte--;	      
+		     break;
+		    }
+        case 3:
+		printf("\n\n\nWhat is the National Sports of China...?");
+		printf("\n\nA.Baseball\t\tB.Table Tennis");
+		printf("\n\nC.Cricket\t\tD.Swimming");
+		if (toupper(getch())=='B')
+			{printf("\n\nCorrect!!!");counte=counte+3;getch();
+			 break;}
+		else
+		    {printf("\n\nWrong!!! The correct answer isB.Table Tennis");getch();
+		     counte--;
+		     break;}
+
+        case 4:
+		printf("\n\n\nWhich Country won the most FIFA World Cup?");
+        printf("\n\nA.Argentina\t\tB.France");
+		printf("\n\nC.Germany\t\tD.Brazil");
+		if (toupper(getch())=='D')
+			{printf("\n\nCorrect!!!");counte=counte+3;getch();
+			 break;}
+		else
+		       {
+                printf("\n\nWrong!!! The correct answer is D.Brazil");getch();
+				counte--;
+		        break;
+		       }
+
+        case 5:
+		printf("\n\n\nNational game of India is _______");
+		printf("\n\nA.Hockey\t\tB.Kabbadi\n\nC.Football\t\tD.Cricket");
+		if (toupper(getch())=='A')
+			{printf("\n\nCorrect!!!");counte=counte+3;getch(); break;}
+		else
+		       {
+		           printf("\n\nWrong!!! The correct answer is A.Hockey");
+		           getch();
+		           counte--;
+		           break;
+		       }
+
+		case 6:
+		printf("\n\n\nWhich country calls Football Soccer...?");
+		printf("\n\nA.India\t\tB.China\n\nC.USA\t\tD.UK");
+		if (toupper(getch())=='C' )
+			{printf("\n\nCorrect!!!");counte=counte+3;getch();
+			 break;}
+		else
+		    {printf("\n\nWrong!!! The correct answer is C.USA");
+		     getch();
+			 counte--;
+		     break;}
+
+        case 7:
+		printf("\n\n\nThomas Cup is related to _________");
+		printf("\n\nA.Cricket\t\tB.Basket Ball\n\nC.Badminton\t\tD.Tennis");
+		if (toupper(getch())=='C')
+			{printf("\n\nCorrect!!!");counte=counte+3;getch();
+			 break;}
+		else
+		       {printf("\n\nWrong!!! The correct answer is C.Badminton");getch();
+		        counte--;
+		        break;}
+
+        case 8:
+		printf("\n\n\nWhere was first Commonwealth Games held...?");
+		printf("\n\nA.USA\t\tB.Chile\n\nC.Mexico\t\tD.Canada");
+		if (toupper(getch())=='D')
+			{printf("\n\nCorrect!!!");counte=counte+3;getch(); break;}
+		else
+		       {printf("\n\nWrong!!! The correct answer is D.Canada");getch();
+		       counte--;
+		       break;}
+
+        case 9:
+		printf("\n\n\nWhat does Blue Color Ring represent in Olympic Rings..?");
+		printf("\n\nA.Asia\t\tB.Europe\n\nC.Africa\t\tD.Oceania");
+		if (toupper(getch())=='B')
+			{printf("\n\nCorrect!!!");counte=counte+3; getch();
+			break;}
+		else
+		       {printf("\n\nWrong!!! The correct answer is B.Europe");getch();
+		        counte--;
+		        break;}
+
+        case 10:
+		printf("\n\n\nWhich sport does internet sensation 'Dan Bilzerian' play..?");
+		printf("\n\nA.Poker\t\tB.Shooting\n\nC.Chess\t\tD.Weight Lifting");
+		if (toupper(getch())=='A')
+			{printf("\n\nCorrect!!!");counte=counte+3;getch(); 
+			 break;}
+		else
+		       {printf("\n\nWrong!!! The correct answer is A.Poker");getch();
+			   counte--;
+			   break;}
+
+	   }}
+	   if(counte>=20)
+	    {goto success;}
+	    else
+	    {
+	    system("cls");
+	    printf("\n\nSORRY YOU ARE NOT ELIGIBLE TO PLAY THIS GAME, BETTER LUCK NEXT TIME");
+	    getch();
+	    goto mainhome;
+	    }
 	  
 	  film:
 	  countn=0;
@@ -523,7 +808,7 @@ int main()
 			   countn=countn-1;
 			   break;}
         }}
-		if(count>=20)
+		if(countn>=20)
 	    {goto success;}
 	    else
 	    {
@@ -532,6 +817,145 @@ int main()
 	    getch();
 	    goto mainhome;
 	    }
+	  landmark:
+	  counto=0;
+	  for(i=1;i<=10;i++)
+	  {system("cls");
+	   r5=i;
+	   switch(r5)
+	   {
+        case 1:
+		printf("\n\n\nTallest mountain on earth....");
+		printf("\n\nA.Kangchenjunga\t\tB.Mt.McKinley\n\nC.Mt.Everest\t\tD.Mt.Rainier");
+		if (toupper(getch())=='C')
+		{printf("\n\nCorrect!!!");
+		 counto=counto+3;
+		 getch();
+		 break;getch();}
+		else
+		{printf("\n\nWrong!!! The correct answer is C.Mt.Everest");getch();
+		 counto--;
+		 break;}
+		case 2:
+		printf("\n\n\nStatue of Liberty was a gift to america from which country?");
+		printf("\n\nA.France\t\tB.Egypt\n\nC.England\t\tD.Mexico");
+		if (toupper(getch())=='A')
+			{printf("\n\nCorrect!!!");
+			 counto=counto+3;
+			 getch();
+			 break;}
+		else
+		    {printf("\n\nWrong!!! The correct answer is A.France");getch();	
+			 counto--;	      
+		     break;
+		    }
+        case 3:
+		printf("\n\n\nChrist the Redeemer is a statue which looks over which city?");
+		printf("\n\nA.San Juan\t\tB.Rio de janeiro");
+		printf("\n\nC.Managua\t\tD.Buenos Aires");
+		if (toupper(getch())=='B')
+			{printf("\n\nCorrect!!!");counto=counto+3;getch();
+			 break;}
+		else
+		    {printf("\n\nWrong!!! The correct answer isB.Rio de Janeiro");getch();
+		     counto--;
+		     break;}
+
+        case 4:
+		printf("\n\n\nNasca lines are in which country...?");
+        printf("\n\nA.Colombia\t\tB.Chile");
+		printf("\n\nC.Ecuador \t\tD.Peru");
+		if (toupper(getch())=='D')
+			{printf("\n\nCorrect!!!");counto=counto+3;getch();
+			 break;}
+		else
+		       {
+                printf("\n\nWrong!!! The correct answer is D.Peru");getch();
+				counto--;
+		        break;
+		       }
+
+        case 5:
+		printf("\n\n\nWhich landmark in Rome was said to have seated more");
+		printf("\nthan 50,000 fans, all vying for blood");
+		printf("\n\nA.The Colosseum\t\tB.Pantheon\n\nC.Vatican Museum\t\tD.Trevi Fountain");
+		if (toupper(getch())=='A')
+			{printf("\n\nCorrect!!!");counto=counto+3;getch(); break;}
+		else
+		       {
+		           printf("\n\nWrong!!! The correct answer is A.The Colosseum");
+		           getch();
+		           counto--;
+		           break;
+		       }
+
+		case 6:
+		printf("\n\n\nIn which country would you find the Wadi Rum");
+		printf("\n\nA.Syria\t\tB.Jordan\n\nC.Cairo\t\tD.Turkey");
+		if (toupper(getch())=='B' )
+			{printf("\n\nCorrect!!!");counto=counto+3;getch();
+			 break;}
+		else
+		    {printf("\n\nWrong!!! The correct answer is B.Jordan");
+		     getch();
+			 counto--;
+		     break;}
+
+        case 7:
+		printf("\n\n\nMillennium Wheel is better known as what.....?");
+		printf("\n\nA.Niagara Skywheel\t\tB.Melbourne Star\n\nC.The London eye\t\tD.The Big Wheel");
+		if (toupper(getch())=='C')
+			{printf("\n\nCorrect!!!");counto=counto+3;getch();
+			 break;}
+		else
+		       {printf("\n\nWrong!!! The correct answer is C.The London eye");getch();
+		        counto--;
+		        break;}
+
+        case 8:
+		printf("\n\n\nSalar de Uyuni is the world's largest what?");
+		printf("\n\nA.Salt flat\t\tB.CapeHorn\n\nC.Yosemite\t\tD.Palmyra");
+		if (toupper(getch())=='A')
+			{printf("\n\nCorrect!!!");counto=counto+3;getch(); break;}
+		else
+		       {printf("\n\nWrong!!! The correct answer is A.Salt flat");getch();
+		       counto--;
+		       break;}
+
+        case 9:
+		printf("\n\n\nMausoleum in Agra that is one of the most famous landmarks in India....");
+		printf("\n\nA.Sheesh Mahal\t\tB.Taj Mahal\n\nC.Agra Fort\t\tD.Jama Masjid");
+		if (toupper(getch())=='B')
+			{printf("\n\nCorrect!!!");counto=counto+3; getch();
+			break;}
+		else
+		       {printf("\n\nWrong!!! The correct answer is B.Taj Mahal");getch();
+		        counto--;
+		        break;}
+
+        case 10:
+		printf("\n\nStonehenge can be found in which English country..?");
+		printf("\n\nA.Wiltshire\t\tB.Fiji\n\nC.Dorset\t\tD.Somerset");
+		if (toupper(getch())=='A')
+			{printf("\n\nCorrect!!!");counto=counto+3;getch(); 
+			 break;}
+		else
+		       {printf("\n\nWrong!!! The correct answer is A.Wiltshire");getch();
+			   counto--;
+			   break;}
+
+	   }}
+	   if(counto>=20)
+	    {goto success;}
+	    else
+	    {
+	    system("cls");
+	    printf("\n\nSORRY YOU ARE NOT ELIGIBLE TO PLAY THIS GAME, BETTER LUCK NEXT TIME");
+	    getch();
+	    goto mainhome;
+	    }
+
+
 	  India:
 	  counts=0;
 	  for(i=1;i<=10;i++)
@@ -659,7 +1083,7 @@ int main()
 			   break;}
 
 	   }}
-	   if(count>=20)
+	   if(counts>=20)
 	    {goto success;}
 	    else
 	    {
@@ -802,7 +1226,7 @@ int main()
 			   county--;
 			   break;}
 	   }}
-	   if(count>=20)
+	   if(county>=20)
 	    {goto success;}
 	   else
 	    {
