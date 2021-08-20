@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<conio.h>
 #include<ctype.h>
+#include<time.h>
 #include<stdlib.h>
 #include<string.h>
 void show_record();
@@ -9,12 +10,11 @@ void help();
 void edit_score(float , char []);
 int main()
      {
-     int countr,r,r1,count,i,n,countn,r2;
+     int countr,r,r1,r3,r4,count;
+	 int i,n,countn,r2,county,counts;
      float score;
      char choice;
 	 char select;
-	 char film;
-	 char affairs;
      char yourname[20];
      time_t t;
 	 time(&t);
@@ -73,7 +73,7 @@ int main()
 	printf("\n\t\t                                                                          ");
 	printf("\n >> In SAFE ZONE you are allowed to choose your interested topic from the "); 
 	printf("\n    given 6 topics.You are eligible to reach the challenge zone only if you");
-	printf("\n    score above 35.This zone consist of total 15 questions where you score 3");
+	printf("\n    score above 23.This zone consist of total 10 questions where you score 3");
 	printf("\n    mark for each right answer and 1 mark deducted for each wrong answer.");
 	printf("\n\t\t\t\t\t\t                                                                     ");
     printf("\n >> Your game starts with CHALLANGE ZONE. In this zone you will be asked ");
@@ -357,8 +357,8 @@ int main()
 		else
 		       {printf("\n\nWrong!!! The correct answer is D.An Army");
 		       getch();
-		       break;}}
-		       }
+		       break;}
+		}}
 
 	if(count>=9)
 	{goto test;}
@@ -377,18 +377,26 @@ int main()
 		{goto zone;}
     zone:
       system("cls");
-      printf("which of the following,did you want to opt");
+      printf("Choose area of your interst!!!!");
 	  printf("\n\t\t -> Press C for Current affairs");
       printf("\n\t\t -> Press O for sports");
       printf("\n\t\t -> Press F for Film");
       printf("\n\t\t -> Press L for Landmark");
       printf("\n\t\t -> Press P for India");
 	  printf("\n\t\t -> Press R for Reasoning");
-      select=toupper(getch());
-	   if(select=='F')
-	   {goto film;}
-	   if(select=='P') 
-	   {goto India;}
+    select=toupper(getch());
+	if (select=='F')
+	{
+		goto film;getch();
+	}
+	else if (select=='P') 
+	{
+		goto India;getch();
+	}
+	else if (select=='R') 
+	{
+		goto reasoning;getch();
+	}
 	  
 	  film:
 	  countn=0;
@@ -509,44 +517,51 @@ int main()
 		printf("\n\nA.Roadside Romeo\t\tB.Ghayab Aaya\n\nC.Hanuman\t\tD.Bal Ganesh");
 		if (toupper(getch())=='A')
 			{printf("\n\nCorrect!!!");countn=countn+3;getch(); 
-			 countn=countn+3;
 			 break;}
 		else
 		       {printf("\n\nWrong!!! The correct answer is A.Roadside Romeo");getch();
 			   countn=countn-1;
 			   break;}
-
-	   }
+        }}
+		if(count>=24)
+	    {goto success;}
+	    else
+	    {
+	    system("cls");
+	    printf("\n\nSORRY YOU ARE NOT ELIGIBLE TO PLAY THIS GAME, BETTER LUCK NEXT TIME");
+	    getch();
+	    goto mainhome;
+	    }
 	  India:
-	  countn=0;
+	  counts=0;
 	  for(i=1;i<=10;i++)
 	  {system("cls");
-	   r2=i;
-	   switch(r2)
+	   r3=i;
+	   switch(r3)
 	   {
         case 1:
 		printf("\n\nWho was the first speaker of Lok Sabha");
 		printf("\n\nA.Mavlankar\t\tB.Hukum Singh\n\nC.B.D Jatti\t\tD.V.V Giri");
 		if (toupper(getch())=='A')
 		{printf("\n\nCorrect!!!");
-		 countn=countn+3;
+		 counts=counts+3;
 		 getch();
 		 break;getch();}
 		else
 		{printf("\n\nWrong!!! The correct answer isA.Mavlankar");getch();
-		 countn=countn-1;
+		 counts--;
 		 break;}
 		case 2:
 		printf("\n\n\nIndia's only Naval Aviation Museum is located in");
 		printf("\n\nA.Karnataka\t\tB.Kerala\n\nC.Tamilnadu\t\tD.Goa");
 		if (toupper(getch())=='D')
 			{printf("\n\nCorrect!!!");
-			 countn=countn+3;
+			 counts=counts+3;
 			 getch();
 			 break;}
 		else
 		    {printf("\n\nWrong!!! The correct answer is D.Goa");getch();	
-			 countn=countn-1;	      
+			 counts--;	      
 		     break;
 		    }
         case 3:
@@ -554,11 +569,11 @@ int main()
 		printf("\n\nA.Krishna\t\tB.Godavari");
 		printf("\n\nC.Kavery\t\tD.Mahanadi");
 		if (toupper(getch())=='B')
-			{printf("\n\nCorrect!!!");countn=countn+3;getch();
+			{printf("\n\nCorrect!!!");counts=counts+3;getch();
 			 break;}
 		else
 		    {printf("\n\nWrong!!! The correct answer isB.Godavari");getch();
-		     countn=countn-1;
+		     counts--;
 		     break;}
 
         case 4:
@@ -566,12 +581,12 @@ int main()
         printf("\n\nA.Bala Gangadhar Thilak\t\tB.Dadabhai Navaroji");
 		printf("\n\nC.Gopala Krishna Gokale\t\tD.Feroz Shah Mehta");
 		if (toupper(getch())=='B')
-			{printf("\n\nCorrect!!!");countn=countn+3;getch();
+			{printf("\n\nCorrect!!!");counts=counts+3;getch();
 			 break;}
 		else
 		       {
                 printf("\n\nWrong!!! The correct answer is B.Dadabhai Navaroji");getch();
-				countn=countn-1;
+				counts--;
 		        break;
 		       }
 
@@ -579,12 +594,12 @@ int main()
 		printf("\n\n\nThe National Police Academy is located in?");
 		printf("\n\nA.Abu Road\t\tB.Delhi\n\nC.Hyderabad\t\tD.Bangalore");
 		if (toupper(getch())=='c')
-			{printf("\n\nCorrect!!!");countn=countn+3;getch(); break;}
+			{printf("\n\nCorrect!!!");counts=counts+3;getch(); break;}
 		else
 		       {
 		           printf("\n\nWrong!!! The correct answer is C.Hyderabad");
 		           getch();
-		           countn=countn-1;
+		           counts--;
 		           break;
 		       }
 
@@ -592,61 +607,218 @@ int main()
 		printf("\n\n\nWho established the first Women's University of India?");
 		printf("\n\nA.Hirabai Tata\t\tB.Ramabai Ranade\n\nC.Annie Besant\t\tD.D.K karve");
 		if (toupper(getch())=='D' )
-			{printf("\n\nCorrect!!!");countn=countn+3;getch();
+			{printf("\n\nCorrect!!!");counts=counts+3;getch();
 			 break;}
 		else
 		    {printf("\n\nWrong!!! The correct answer is D.D.K karve ");
 		     getch();
-			 countn=countn-1;
+			 counts--;
 		     break;}
 
         case 7:
 		printf("\n\n\nThe maximum number of Public Accounts Committie can be?");
 		printf("\n\nA.10\t\tB.12\n\nC.22\t\tD.25");
 		if (toupper(getch())=='C')
-			{printf("\n\nCorrect!!!");countn=countn+3;getch();
+			{printf("\n\nCorrect!!!");counts=counts+3;getch();
 			 break;}
 		else
 		       {printf("\n\nWrong!!! The correct answer is c.22");getch();
-		        countn=countn-1;
+		        counts--;
 		        break;}
 
         case 8:
 		printf("\n\n\nIn which year Sikkim become a part of India");
 		printf("\n\nA.1972\t\tB.1975\n\nC.1977\t\tD.1980");
 		if (toupper(getch())=='B')
-			{printf("\n\nCorrect!!!");countn=countn+3;getch(); break;}
+			{printf("\n\nCorrect!!!");counts=counts+3;getch(); break;}
 		else
 		       {printf("\n\nWrong!!! The correct answer is B.1975");getch();
-		       countn=countn-1;
+		       counts--;
 		       break;}
 
         case 9:
 		printf("\n\n\nDooradarshan founded in India in the year?");
 		printf("\n\nA.1962\t\tB.1965\n\nC.1952\t\tD.1959");
 		if (toupper(getch())=='D')
-			{printf("\n\nCorrect!!!");countn=countn+3; getch();
+			{printf("\n\nCorrect!!!");counts=counts+3; getch();
 			break;}
 		else
 		       {printf("\n\nWrong!!! The correct answer is D.1959");getch();
-		        countn=countn-1;
+		        counts--;
 		        break;}
 
         case 10:
 		printf("\n\nWhich river is called Bangal's sarrow?");
 		printf("\n\nA.Yamuna\t\tB.Damodhar\n\nC.Narmada\t\tD.Tapti");
 		if (toupper(getch())=='B')
-			{printf("\n\nCorrect!!!");countn=countn+3;getch(); 
-			 countn=countn+3;
+			{printf("\n\nCorrect!!!");counts=counts+3;getch(); 
 			 break;}
 		else
 		       {printf("\n\nWrong!!! The correct answer is B.Damodhar");getch();
-			   countn=countn-1;
+			   counts--;
 			   break;}
 
-	   }
+	   }}
+	   if(count>=24)
+	    {goto success;}
+	    else
+	    {
+	    system("cls");
+	    printf("\n\nSORRY YOU ARE NOT ELIGIBLE TO PLAY THIS GAME, BETTER LUCK NEXT TIME");
+	    getch();
+	    goto mainhome;
+	    }
 
-      
+	   reasoning:
+	  county=0;
+	  for(i=1;i<=10;i++)
+	  {system("cls");
+	   r4=i;
+	   switch(r4)
+	   {
+        case 1:
+		printf("\n\n80, 10, 70, 15, 60,.....What number comes next?");
+		printf("\n\nA.20\t\tB.25\n\nC.30\t\tD.50");
+		if (toupper(getch())=='A')
+		{printf("\n\nCorrect!!!");
+		 county=county+3;
+		 getch();
+		 break;getch();}
+		else
+		{printf("\n\nWrong!!! The correct answer is A.20");getch();
+		 county--;
+		 break;}
+		case 2:
+		printf("\n\n\nPick the odd man out.");
+		printf("\n\nA.just\t\tB.fair\n\nC.equitable\t\tD.biased");
+		if (toupper(getch())=='D')
+			{printf("\n\nCorrect!!!");
+			 county=county+3;
+			 getch();
+			 break;}
+		else
+		    {printf("\n\nWrong!!! The correct answer is D.biased");getch();	
+			 county--;	      
+		     break;
+		    }
+        case 3:
+		printf("\n\n\nCUP:LIP :: BIRD:?");
+		printf("\n\nA.GRASS\t\tB.FOREST\n\nC.BEAK\t\tD.BUSH");
+		if (toupper(getch())=='C')
+			{printf("\n\nCorrect!!!");county=county+3;getch();
+			 break;}
+		else
+		    {printf("\n\nWrong!!! The correct answer is C.BEAK");getch();
+		     county--;
+		     break;}
+
+        case 4:
+		printf("\n\n\nKevin is the oldest.Nickolas is not the oldest.Joseph is not");
+		printf("\n\nyoungest.If they are brother's,then who is the youngest?");
+	    printf("\n\nA.Joseph\t\tB.Kevin\n\nC.Nicholas\t\tD.Both joseph and Nicholas");
+		if (toupper(getch())=='C')
+			{printf("\n\nCorrect!!!");county=county+3;getch();
+			 break;}
+		else
+		       {
+                printf("\n\nWrong!!! The correct answer is C.Nicholas");getch();
+		        county--;
+		        break;
+		       }
+
+        case 5:
+		printf("\n\n\nSTATEMENT:Medicine'P' is a drug which is causing?");
+		printf("\n\n             ripples in medical field.");
+		printf("\n\n Assumption I:No other drug is causing ripples in medical field.");
+		printf("\n\n Assumption II:Medicine'P' is a great drug");
+		printf("\n\nA.If only assumptionI is implicit\t\tB.If only assumptionI is implicit");
+		printf("\n\nC.If either I or II is implicit\t\tD.If neither I or II is implicit");
+		if (toupper(getch())=='D')
+			{printf("\n\nCorrect!!!");county=county+3;getch(); break;}
+		else
+		       {
+		           printf("\n\nWrong!!! The correct answer is D.If neither I or II is implicit");
+		           getch();
+		           county--;
+		           break;
+		       }
+
+		case 6:
+		printf("\n\n\n SCD, TEF, UGH, _____, WKL");
+		printf("\n\nA.IJT\t\tB.VIJ\n\nC.CMN\t\tD.UJI");
+		if (toupper(getch())=='B' )
+			{printf("\n\nCorrect!!!");county=county+3;getch();
+			 break;}
+		else
+		    {printf("\n\nWrong!!! The correct answer is B.VIJ");
+		     getch();
+			 county--;
+		     break;}
+
+        case 7:
+		printf("\n\n\nPick an odd man out");
+		printf("\n\nA.wing\t\tB.fin\n\nC.beak\t\tD.rudder");
+		if (toupper(getch())=='C')
+			{printf("\n\nCorrect!!!");county=county+3;getch();
+			 break;}
+		else
+		       {printf("\n\nWrong!!! The correct answer is C.beak");getch();
+		        county--;
+		        break;}
+
+        case 8:
+		printf("\n\n\nPointing to a photograph, a man said,'I have no brother or sister");
+		printf("\n\nbut that man's father is my father's son.' Whose photograph was it?");
+		printf("\n\nA.His own\t\tB.His son\n\nC.His father\t\tD.His grandfather");
+		if (toupper(getch())=='B')
+			{printf("\n\nCorrect!!!");county=county+3;getch(); break;}
+		else
+		       {printf("\n\nWrong!!! The correct answer is B.His son");getch();
+		       county--;
+		       break;}
+
+        case 9:
+		printf("\n\n'A*B'means A is father of B\n\n'A–B'means A is sister of B");
+		printf("\n\n'A+B'means A is mother of B\n\n'A/B'means A is sister of B");
+        printf("\n\nIn the expression D+F*O/P,how is O related to D?");
+		printf("\n\nA.Grand daughter\t\tB.Son\n\nC.Grand son\t\tD.Daughter");
+		if (toupper(getch())=='C')
+			{printf("\n\nCorrect!!!");county=county+3; getch();
+			break;}
+		else
+		       {printf("\n\nWrong!!! The correct answer is C.Grand son");getch();
+		        county--;
+		        break;}
+
+        case 10:
+		printf("\n\nIf '+' stands for '-' , '-' stands for 'x', 'x' stands for '/'and");
+		printf("\n\n'/' stands for '+' then what is the value of 56x7/13-11+15-8/2-7?");
+		printf("\n\nA.30\t\tB.45\n\nC.60\t\tD.90");
+		if (toupper(getch())=='B')
+			{printf("\n\nCorrect!!!");county=county+3;getch(); 
+			 break;}
+		else
+		       {printf("\n\nWrong!!! The correct answer is B.45");getch();
+			   county--;
+			   break;}
+	   }}
+	   if(count>=24)
+	    {goto success;}
+	   else
+	    {
+	    system("cls");
+	    printf("\n\nSORRY YOU ARE NOT ELIGIBLE TO PLAY THIS GAME, BETTER LUCK NEXT TIME");
+	    getch();
+	    goto mainhome;
+	    }
+
+    success:
+	system("cls");
+     printf("\n\n\t*** CONGRATULATION %s YOU ARE ELIGIBLE TO PLAY CHALLENGE ZONE ***",strupr(yourname));
+     printf("\n\n\n\n\t!Press any key to move forward!");
+     if(toupper(getch())=='p')
+		{goto game;}
+
 	game:
     countr=0;
     for(i=1;i<=10;i++)
