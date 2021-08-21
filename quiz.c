@@ -77,8 +77,8 @@ int main()
 	printf("\n    mark for each right answer and 1 mark deducted for each wrong answer.");
 	printf("\n\t\t\t\t\t\t                                                                     ");
     printf("\n >> Your game starts with CHALLANGE ZONE. In this zone you will be asked ");
-    printf("\n    total 10 questions. Each right answer will be awarded $100,000!");
-    printf("\n    By this way you can win upto ONE MILLION cash prize!!!!!..........");
+    printf("\n    total 15 questions. Each right answer will be awarded $100,000!");
+    printf("\n    By this way you can win upto more then ONE MILLION cash prize!!!!!..........");
     printf("\n >> You will be given 4 options and you have to press A, B ,C or D for the");
     printf("\n    right option.");
     printf("\n >> You will be asked questions continuously, till right answers are given");
@@ -1476,20 +1476,22 @@ void reset_score()
 void help()
 	{system("cls");
     printf("\n\n                              HELP");
-    printf("\n -------------------------------------------------------------------------");
+    printf("\n ------------------------------AIRIA QUIZZIZ----------------------------------");
     printf("\n ......................... C program Quiz Game...........");
-    printf("\n >> There are two rounds in the game, WARMUP ROUND & CHALLANGE ROUND");
-    printf("\n >> In warmup round you will be asked a total of 3 questions to test your general");
-    printf("\n    knowledge. You will be eligible to play the game if you can give atleast 2");
-    printf("\n    right answers otherwise you can't play the Game...........");
-    printf("\n >> Your game starts with the CHALLANGE ROUND. In this round you will be asked");
-    printf("\n    total 10 questions each right answer will be awarded $100,000.");
-    printf("\n    By this way you can win upto ONE MILLION cash prize in USD...............");
+    printf("\n >> There are three zones in the game, WARMUP ZONE< SAFE ZONE & CHALLANGE ZONE");
+    printf("\n >> In WARMUP ZONE, you will be asked a total of 22 questions to test your general");
+    printf("\n    knowledge. You will be eligible to play the game only if you give atleast 9");
+    printf("\n    right answers otherwise you wouldn't be able to continue the game...........");
+	printf("\n >> In SAFE ZONE you are allowed to choose your interested topic from the "); 
+	printf("\n    given 6 topics.You are eligible to reach the challenge zone only if you");
+	printf("\n    score above 19.This zone consist of total 10 questions where you score 3");
+	printf("\n    mark for each right answer and 1 mark deducted for each wrong answer.");
+    printf("\n >> Your game starts with the CHALLANGE ZONE. In this round you will be asked");
+    printf("\n    total 15 questions each right answer will be awarded $100,000.");
+    printf("\n    By this way you can win upto more than ONE MILLION cash prize in USD...............");
     printf("\n >> You will be given 4 options and you have to press A, B ,C or D for the");
     printf("\n    right option");
     printf("\n >> You will be asked questions continuously if you keep giving the right answers.");
-    printf("\n >> No negative marking for wrong answers");
-
 	printf("\n\n\t*********************BEST OF LUCK*********************************");
 	printf("\n\n\t*****This QUIZ GAME is developed by SUCCOTASH team********");}
 
