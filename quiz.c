@@ -20,7 +20,6 @@ int main()
 	 time(&t);
      mainhome:
      system("cls");
-	 printf("\n\t\t                                             \n\n");
      printf("\n\t\t                                             \n\n");
      printf("\n\t\t\t          WELCOME ");
      printf("\n\t\t\t            TO ");
