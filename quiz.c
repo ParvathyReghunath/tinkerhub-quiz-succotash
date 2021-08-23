@@ -1251,7 +1251,7 @@ int main()
 
 	game:
     countr=0;
-    for(i=1;i<=10;i++)
+    for(i=1;i<=15;i++)
      {system("cls");
      r=i;
 
@@ -1370,7 +1370,7 @@ int main()
 		if (toupper(getch())=='A')
 			{printf("\n\nCorrect!!!");countr++;getch(); break;}
 		else
-		       {printf("\n\nWrong!!! The correct answer is A.Nile");getch();break;goto score;}
+		       {printf("\n\nWrong!!! The correct answer is A.Nile");getch();break;}
 
         case 11:
 		printf("\n\n\nWho wrote the famous book WE THE PEOPLE?");
@@ -1380,7 +1380,7 @@ int main()
 			 break;}
 		else
               {printf("\n\nWrong!!! The correct answer is D.Nani Palkhivala");getch();
-              break;goto score;}
+              break;}
 
         case 12:
 		printf("\n\n\nWhich city is known at 'The City of Seven Hills'?");
@@ -1390,7 +1390,7 @@ int main()
 			   break;}
 		else
               {printf("\n\nWrong!!! The correct answer is A.Rome");getch();
-              break;goto score;}
+              break;}
 
 		case 13:
 		printf("\n\n\n18th March is celebrated as?");
@@ -1401,7 +1401,7 @@ int main()
 			break;}
 		else
 		       {printf("\n\nWrong!!! The correct answer is D.World Sleep Day");getch();
-		       break;goto score;}
+		       break;}
 
         case 14:
 		printf("\n\n\nFirst bank in Kerala'?");
@@ -1412,7 +1412,7 @@ int main()
 			 break;}
 		else
 		       {printf("\n\nWrong!!! The correct answer is C.Nedumanghadi Bank");getch();
-		       break;goto score;}
+		       break;}
 
 		case 15:
 		printf("\n\n\nGreta Garbo is associated with?");
@@ -1422,8 +1422,7 @@ int main()
 			 break;}
 		else
 		       {printf("\n\nWrong!!! The correct answer is D.Acting");getch();
-		       goto score;
-		       break;}}}
+		       break;goto score;}}}
 	score:
     system("cls");
 	score=(float)countr*100000;
