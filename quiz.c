@@ -72,9 +72,9 @@ int main()
     printf("\n    9 right answers, otherwise you can't proceed further to the Safe Zone.");
 	printf("\n\t\t                                                                          ");
 	printf("\n >> In SAFE ZONE you are allowed to choose your interested topic from the "); 
-	printf("\n    given 6 topics.You are eligible to reach the challenge zone only if you");
-	printf("\n    score above 19.This zone consist of total 10 questions where you score 3");
-	printf("\n    mark for each right answer and 1 mark deducted for each wrong answer.");
+	printf("\n    given 6 topics.This zone consist of total 10 questions where you score 3");
+	printf("\n    mark for each right answer and 1 mark deducted for each incorrect answer.");
+	printf("\n    You are eligible to reach the challenge zone only if you score above 19 in this zone.");
 	printf("\n\t\t\t\t\t\t                                                                     ");
     printf("\n >> Your game starts with CHALLANGE ZONE. In this zone you will be asked ");
     printf("\n    total 15 questions. Each right answer will be awarded $100,000!");
@@ -366,6 +366,9 @@ int main()
 	{
 	system("cls");
 	printf("\n\nSORRY YOU ARE NOT ELIGIBLE TO PLAY THIS GAME, BETTER LUCK NEXT TIME");
+	printf("\n\t\t.................................................. ");
+    printf("\n\t\t Current date and time : %s",ctime(&t));
+	printf("\t\t.................................................. ");
 	getch();
 	goto mainhome;
 	}
@@ -1232,6 +1235,9 @@ int main()
 	    {
 	    system("cls");
 	    printf("\n\nSORRY YOU ARE NOT ELIGIBLE TO PLAY THIS GAME, BETTER LUCK NEXT TIME");
+		printf("\n\t\t.................................................. ");
+        printf("\n\t\t Current date and time : %s",ctime(&t));
+	    printf("\t\t.................................................. ");
 	    getch();
 	    goto mainhome;
 	    }
@@ -1421,27 +1427,38 @@ int main()
 	score:
     system("cls");
 	score=(float)countr*100000;
-	if(score>0.00 && score<1000000)
+	if(score>0.00 && score<1500000)
 	{
 	   printf("\n\n\t\t**************** CONGRATULATION *****************");
-	     printf("\n\t You won $%.2f",score);goto go;}
+	     printf("\n\t You won $%.2f",score);goto go;
+		 printf("\n\t\t.................................................. ");
+         printf("\n\t\t Current date and time : %s",ctime(&t));
+	     printf("\t\t.................................................. ");}
 
-	 else if(score==1000000.00)
+	 else if(score==1500000.00)
 	{
 	    printf("\n\n\n \t\t**************** CONGRATULATION ****************");
 	    printf("\n\t\t\t\t YOU ARE A MILLIONAIRE!!!!!!!!!");
 	    printf("\n\t\t You won $%.2f",score);
 	    printf("\t\t Thank You!!");
+		printf("\n\t\t.................................................. ");
+        printf("\n\t\t Current date and time : %s",ctime(&t));
+	    printf("\t\t.................................................. ");
 	}
 	 else
     {
 	 printf("\n\n\t******** SORRY YOU DIDN'T WIN ANY CASH ********");
 	    printf("\n\t\t Thanks for your participation");
-	    printf("\n\t\t TRY AGAIN");goto go;}
+	    printf("\n\t\t TRY AGAIN");goto go;
+		printf("\n\t\t.................................................. ");
+        printf("\n\t\t Current date and time : %s",ctime(&t));
+	    printf("\t\t.................................................. ");
+		}
+	
 
 	go:
 	puts("\n\n Press Y if you want to play next game");
-	puts(" Press any key if you want to go main menu");
+	puts(" Press any other key if you want to go main menu");
 	if (toupper(getch())=='Y')
 		goto home;
 	else
