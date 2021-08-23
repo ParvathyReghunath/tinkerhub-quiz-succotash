@@ -746,7 +746,7 @@ int main()
         case 5:
 		printf("\n\n\nThe movie 'The Godfather' wins the Oscar for Best Picture in the year?");
 		printf("\n\nA.1969\t\tB.1970\n\nC.1972\t\tD.1975");
-		if (toupper(getch())=='c')
+		if (toupper(getch())=='C')
 			{printf("\n\nCorrect!!!");countn=countn+3;getch(); break;}
 		else
 		       {
@@ -1020,7 +1020,7 @@ int main()
         case 5:
 		printf("\n\n\nThe National Police Academy is located in?");
 		printf("\n\nA.Abu Road\t\tB.Delhi\n\nC.Hyderabad\t\tD.Bangalore");
-		if (toupper(getch())=='c')
+		if (toupper(getch())=='C')
 			{printf("\n\nCorrect!!!");counts=counts+3;getch(); break;}
 		else
 		       {
